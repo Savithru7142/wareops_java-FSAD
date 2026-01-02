@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration>
+<hibernate-configuration>
+  <session-factory>
+
+    <!-- Database Connection -->
+    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miningoplogbook?useSSL=false&amp;serverTimezone=Asia/Kolkata</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">Prasanna@7142</property>
+
+    <!-- Hibernate Dialect -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    <!-- SQL Logs in Console -->
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+
+    <!-- Auto Schema Update (for development, allowed since no associations used) -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+    <!-- Entity Class Mappings (IDs only, no associations) -->
+    <mapping class="com.wareops.entity.Bin"/>
+    <mapping class="com.wareops.entity.Customer"/>
+    <mapping class="com.wareops.entity.Dispatch"/>
+    <mapping class="com.wareops.entity.OrderItem"/>
+    <mapping class="com.wareops.entity.Product"/>
+    <mapping class="com.wareops.entity.PurchaseItem"/>
+    <mapping class="com.wareops.entity.PurchaseReceipt"/>
+    <mapping class="com.wareops.entity.ReturnLog"/>
+    <mapping class="com.wareops.entity.SalesOrder"/>
+    <mapping class="com.wareops.entity.StockLedger"/>
+    <mapping class="com.mapping.entity.Supplier"/>
+    <mapping class="com.warehouse.entity.Warehouse"/>
+
+  </session-factory>
+</hibernate-configuration>
